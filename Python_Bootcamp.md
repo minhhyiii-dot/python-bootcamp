@@ -209,53 +209,133 @@ Once the stop condition is satisfied.
 
 # 6. DAILY OUTPUT FORMAT
 
-At the end of every day, ChatGPT should produce:
+## STANDARDIZED DAILY UPDATE FORMAT
 
-```text
-DAY X — COMPLETED / PARTIAL / MISSED
+At the end of every learning day, ChatGPT must use the following structure consistently.
 
-Time spent:
-Main topic:
+The daily update must begin with a level-2 Markdown heading (`##`) because the tracking section itself uses a level-1 heading.
 
-What you can now do:
--
+Do not randomly rename sections, remove core sections, or change the heading hierarchy between days.
 
-What you understood:
--
+### Required Daily Update Structure
 
-What you struggled with:
--
+## --- DAY X UPDATE ---
 
-Main mistake:
--
+**DAY X | COMPLETED / PARTIAL / MISSED | [time spent] | Level: X.X/5**
 
-Blank-screen performance:
--
+### Focus Topic
 
-Independence:
--
+[Main topic of the day]
 
-Score: X / 5
+### Session Notes
 
-Code / solution you are most proud of:
--
+- Summarize what was practiced during the session.
+- State what the learner successfully implemented.
+- Mention important concepts that became clearer.
+- Record meaningful debugging or reasoning improvements.
+- Note whether exercises were completed independently, with hints, or with heavier AI assistance.
+- Focus on observable performance rather than generic praise.
 
-Current weakness:
--
+### Minhyi Notes
 
-Next Day:
--
-```
+- Record the learner's important mistakes or misconceptions.
+- Record what initially caused confusion.
+- Mention where AI assistance was needed.
+- Mention anything the learner noticed about his own reasoning or coding process.
+- Preserve useful self-reflection from the session.
 
-Do not over-track unnecessary metrics.
+### Key Lesson
 
-The purpose of the log is:
-- recognition,
-- continuity,
-- evidence of progress,
-- context for the next chat.
+> One concise sentence summarizing the most important lesson from the day.
+
+### Performance Evaluation
+
+- Concept understanding: X.X/5
+- Coding correctness: X.X/5
+- Reasoning / problem decomposition: X.X/5
+- Independence: X.X/5
+- Debugging: X.X/5
+
+**Final Score: X.X/5**
+
+The category scores may be adjusted when a topic makes one category irrelevant, but:
+
+- independence must always be evaluated;
+- correctness must always be evaluated;
+- the Final Score must remain on the 1–5 scale.
+
+### Blank-Screen Performance
+
+Describe specifically what Minhyi was able to write without copying or seeing the final solution first.
+
+If substantial AI help was required, state:
+
+- what was written independently;
+- what required hints;
+- whether the solution was successfully rewritten afterward.
+
+### Progress Update
+
+- Bootcamp Progress: Day X / 84
+- Current Phase: Phase X — [Phase Name]
+- Current Position: [short skill description based on actual performance]
+
+Do not invent percentage mastery unless there is enough evidence to justify it.
+
+### Critical Weakness
+
+> State the single most important weakness currently limiting progress.
+
+This should be specific and actionable.
+
+Bad example:
+
+> Needs more practice.
+
+Better example:
+
+> Can explain variable assignment but still hesitates when translating a simple verbal rule into Python syntax without a hint.
+
+### Session Verdict
+
+For a completed session:
+
+**COMPLETED**
+
+The learning objective was achieved. Minhyi demonstrated acceptable independent use of today's concept and can proceed to the next Day.
+
+For a time-limited incomplete session:
+
+**PARTIAL — TIME**
+
+The core concept is understood, but the planned session was not completed. Finish the remaining task before proceeding.
+
+For a competency-limited incomplete session:
+
+**PARTIAL — COMPETENCY**
+
+The concept is not yet independently usable. Do not advance to the next Day until the weak pattern is repaired.
+
+### Next Session
+
+**Day X+1 — [Topic from the official bootcamp roadmap]**
+
+If the current Day is `PARTIAL — COMPETENCY`, the next session should first repair the failed concept instead of automatically advancing.
 
 ---
+
+## Rules for Writing Daily Updates
+
+1. The update must reflect what actually happened in the session. Do not manufacture achievements, mistakes, or independence.
+2. Do not give a high score merely because the final code works.
+3. AI-assisted correctness and independent correctness are different and must be described separately.
+4. If Minhyi initially fails but later solves the task after a hint, record both stages.
+5. If AI gives a full solution, this must reduce the independence assessment unless Minhyi later rewrites it successfully from a blank screen.
+6. Prefer specific observations over motivational filler.
+7. The daily update should be detailed enough to act as context for the next chat, but should not become a transcript of the whole session.
+8. Keep terminology and section order consistent across all days.
+9. For Checkpoint / Project / Timed Challenge days, additional sections may be added when useful, but the core sections above must remain.
+10. The purpose of tracking is to show progression from AI-dependent coding toward independent programming.
 
 # 7. SCORING
 
@@ -773,3 +853,168 @@ It is useful if the following transformation happens:
 → **HackerRank-ready**
 → **ready to branch into AI / ML / DE**.
 
+# Tracking
+
+# DAY 1 — COMPLETED
+
+> **Time spent:** 28 min 11 sec  
+> **Main topic:** Running Python, `print()`, and basic syntax  
+> **Score:** 4 / 5
+
+---
+
+## What I can now do
+
+- Run a Python file successfully in VS Code.
+- Use `print()` to display text and numbers.
+- Write multiple `print()` statements independently.
+- Recognize basic syntax problems involving quotes and parentheses.
+- Understand that Python is case-sensitive.
+- Distinguish normal execution from debugging at a basic conceptual level.
+
+---
+
+## What I understood
+
+- `print()` displays values in the terminal.
+- Text must be surrounded by matching quotation marks.
+- `123` and `"123"` can look identical when printed but are different kinds of values.
+- `print`, `Print`, and `PRINT` are not the same name in Python.
+- Each `print()` statement normally produces a new output line.
+
+---
+
+## What I struggled with
+
+- Small attention-to-detail mistakes rather than Python concept problems.
+- I initially selected only **A** when both **A** and **D** were valid identical `print()` statements.
+- I missed the final `!` in the exact-output task.
+
+---
+
+## Main mistake
+
+I did not check the required output character-for-character before considering the task finished.
+
+---
+
+## Blank-screen performance
+
+**Good.**
+
+- Wrote all five `print()` statements independently.
+- Successfully executed the program.
+- No syntax assistance was needed for the final task.
+
+---
+
+## Independence
+
+**Strong for Day 1.**
+
+I predicted outputs, identified errors, wrote code from scratch, and ran it myself.
+
+---
+
+# DAY 2 — COMPLETED
+
+## Time Spent
+≈ 1 hour
+
+## Main Topic
+**Variables and assignment**
+
+---
+
+## What You Can Now Do
+
+- Create variables
+- Assign values with `=`
+- Reassign variables
+- Copy the current value of one variable into another
+- Use valid Python variable names
+- Predict how reassignment changes program state
+
+---
+
+## What You Understood
+
+- `=` means **assignment**, not mathematical equality
+- A later assignment replaces the variable's previous value
+- `b = a` copies the **current value** of `a`
+- `b` does not automatically follow future changes to `a`
+- Expressions like:
+
+```python
+sum = sum + n
+```
+
+use the current value first, then reassign the result
+
+---
+
+## What You Struggled With
+
+- Variable naming rules at first
+- Accidentally typing `current_balace` instead of `current_balance`
+
+---
+
+## Main Mistake
+
+**Small variable-name typo / naming-rule mistakes**
+
+---
+
+## Blank-Screen Performance
+
+- Successfully completed the final task independently
+- AI autocomplete was disabled for the bootcamp workspace before the final attempt
+
+---
+
+## Independence
+
+**Strong**
+
+- You reasoned before running code
+- You did not need solution-level help
+
+---
+
+## Score
+
+**4 / 5**
+
+---
+
+## Code / Solution You Are Most Proud Of
+
+```python
+bank_balance = 1000
+
+old_balance = bank_balance
+
+bank_balance = 1500
+
+current_balance = bank_balance
+
+print(old_balance)
+print(bank_balance)
+print(current_balance)
+```
+
+---
+
+## Current Weakness
+
+- Need to be more precise with variable names
+- Avoid small typos
+
+---
+
+## Next Day
+
+### Day 3 — Core Data Types
+
+`int` · `float` · `str` · `bool`
