@@ -1,0 +1,5 @@
+print("=== PYTHON BOOTCAMP ===")
+print("Name: Minhyi")
+print("Day: 1")
+print("Status: Started")
+print("I can run Python")
