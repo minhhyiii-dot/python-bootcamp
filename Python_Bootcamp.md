@@ -855,140 +855,162 @@ It is useful if the following transformation happens:
 
 # Tracking
 
-# DAY 1 — COMPLETED
+## --- DAY 1 UPDATE ---
 
-> **Time spent:** 28 min 11 sec  
-> **Main topic:** Running Python, `print()`, and basic syntax  
-> **Score:** 4 / 5
+**DAY 1 | COMPLETED | 28 min 11 sec | Level: 4.2/5**
 
----
+### Focus Topic
 
-## What I can now do
+Running Python, `print()`, and basic syntax.
 
-- Run a Python file successfully in VS Code.
-- Use `print()` to display text and numbers.
-- Write multiple `print()` statements independently.
-- Recognize basic syntax problems involving quotes and parentheses.
-- Understand that Python is case-sensitive.
-- Distinguish normal execution from debugging at a basic conceptual level.
+### Session Notes
 
----
+- Learned how to run a Python file successfully in VS Code.
+- Practiced using `print()` to display text and numeric values.
+- Correctly predicted the output of multiple `print()` statements.
+- Identified a basic syntax error caused by an unclosed quotation mark.
+- Understood that `123` and `"123"` may print the same way but represent different kinds of values in Python.
+- Learned that Python is case-sensitive, so `print`, `Print`, and `PRINT` are treated as different names.
+- Clarified the difference between **Run Python File** and **Start Debugging (`F5`)** in VS Code.
+- Completed the final blank-screen task independently using five `print()` statements.
+- No solution-level AI help was required for the final coding task.
 
-## What I understood
+### Minhyi Notes
 
-- `print()` displays values in the terminal.
-- Text must be surrounded by matching quotation marks.
-- `123` and `"123"` can look identical when printed but are different kinds of values.
-- `print`, `Print`, and `PRINT` are not the same name in Python.
-- Each `print()` statement normally produces a new output line.
+- Initially described an unclosed string as a problem with the "parameters"; corrected this to the more precise idea that the quotation mark was not closed properly.
+- In one syntax check, selected only **A** even though **A** and **D** were identical and both correct.
+- In the final task, the requested output ended with `I can run Python!`, but the written output omitted the final `!`.
+- The main issue was not understanding `print()` syntax, but checking exact requirements carefully before considering the task finished.
+- Asked about VS Code debugging after noticing that `F5` behaved differently from the normal Python run button.
 
----
+### Key Lesson
 
-## What I struggled with
+> Correct code is not only about valid syntax; when exact output is required, every character matters.
 
-- Small attention-to-detail mistakes rather than Python concept problems.
-- I initially selected only **A** when both **A** and **D** were valid identical `print()` statements.
-- I missed the final `!` in the exact-output task.
+### Performance Evaluation
 
----
+- Concept understanding: 4.5/5
+- Coding correctness: 4.0/5
+- Reasoning / problem decomposition: 4.0/5
+- Independence: 4.5/5
+- Debugging: 4.0/5
 
-## Main mistake
+**Final Score: 4.2/5**
 
-I did not check the required output character-for-character before considering the task finished.
+### Blank-Screen Performance
 
----
+Minhyi independently wrote a five-line Python program using only `print()` statements without seeing the final solution first.
 
-## Blank-screen performance
+```python
+print("=== PYTHON BOOTCAMP ===")
+print("Name: Minhyi")
+print("Day: 1")
+print("Status: Started")
+print("I can run Python")
+```
 
-**Good.**
+The program ran successfully.
 
-- Wrote all five `print()` statements independently.
-- Successfully executed the program.
-- No syntax assistance was needed for the final task.
+The only issue was that the final required output included `!`, while the submitted version did not.
 
----
+No syntax hint or solution-level assistance was needed during the final attempt.
 
-## Independence
+### Progress Update
 
-**Strong for Day 1.**
+- Bootcamp Progress: Day 1 / 84
+- Current Phase: Phase 1 — Python Survival
+- Current Position: Can independently run simple Python scripts and write basic `print()` statements from a blank screen; basic syntax awareness is developing correctly.
 
-I predicted outputs, identified errors, wrote code from scratch, and ran it myself.
+### Critical Weakness
 
----
+> Needs to check exact task requirements character-by-character instead of assuming that visually similar output is fully correct.
 
-# DAY 2 — COMPLETED
+### Session Verdict
 
-## Time Spent
-≈ 1 hour
+**COMPLETED**
 
-## Main Topic
+The learning objective was achieved. Minhyi demonstrated acceptable independent use of today's concept and can proceed to the next Day.
+
+### Next Session
+
+**Day 2 — Variables and assignment**
+
+## --- DAY 2 UPDATE ---
+
+**DAY 2 | COMPLETED | ≈ 1 hour | Level: 4.4/5**
+
+### Focus Topic
+
 **Variables and assignment**
 
----
+### Session Notes
 
-## What You Can Now Do
+- Practiced creating variables and assigning values with `=`.
+- Correctly understood that `=` represents assignment rather than mathematical equality.
+- Practiced reassigning variables and tracking how their values change over time.
+- Correctly explained why:
 
-- Create variables
-- Assign values with `=`
-- Reassign variables
-- Copy the current value of one variable into another
-- Use valid Python variable names
-- Predict how reassignment changes program state
+```python
+score = 10
+score = 15
+```
 
----
+results in `score` containing `15`.
 
-## What You Understood
-
-- `=` means **assignment**, not mathematical equality
-- A later assignment replaces the variable's previous value
-- `b = a` copies the **current value** of `a`
-- `b` does not automatically follow future changes to `a`
-- Expressions like:
+- Connected reassignment with the accumulator-style pattern:
 
 ```python
 sum = sum + n
 ```
 
-use the current value first, then reassign the result
+and understood that Python first evaluates the current value on the right side before assigning the new result back to the variable.
 
----
+- Correctly reasoned through variable copying:
 
-## What You Struggled With
+```python
+a = 10
+b = a
+a = 20
+```
 
-- Variable naming rules at first
-- Accidentally typing `current_balace` instead of `current_balance`
+and understood that `b` remains `10` because it received the current value of `a` at the time of assignment.
 
----
+- Practiced valid Python variable naming.
+- Initially made mistakes with `_user` and `2user`, then corrected the rule:
+  - variable names may begin with `_`;
+  - variable names cannot begin with a number;
+  - spaces and `-` are not valid inside normal variable names;
+  - Python keywords such as `class` cannot be used as variable names.
+- Completed the final blank-screen task independently after disabling AI autocomplete in the bootcamp workspace.
+- No full-solution AI assistance was required.
 
-## Main Mistake
+### Minhyi Notes
 
-**Small variable-name typo / naming-rule mistakes**
+- Initially thought `_user` was invalid and `2user` was valid.
+- Needed clarification on Python variable naming rules.
+- Accidentally typed `current_balace` instead of `current_balance`.
+- The typo was logically harmless because it was used consistently, but it did not match the required variable name.
+- Noticed that VS Code AI inline suggestions could reveal answers before an independent attempt was completed.
+- Chose to disable AI features for the bootcamp workspace so future blank-screen exercises remain genuinely independent.
+- Reasoning about reassignment felt intuitive because it connected with prior exposure to patterns such as `sum = sum + n`.
 
----
+### Key Lesson
 
-## Blank-Screen Performance
+> A variable name refers to its currently assigned value, and reassignment replaces that value without automatically changing variables that copied an earlier value.
 
-- Successfully completed the final task independently
-- AI autocomplete was disabled for the bootcamp workspace before the final attempt
+### Performance Evaluation
 
----
+- Concept understanding: **4.5/5**
+- Coding correctness: **4.5/5**
+- Reasoning / problem decomposition: **4.5/5**
+- Independence: **4.5/5**
+- Debugging: **4.0/5**
 
-## Independence
+**Final Score: 4.4/5**
 
-**Strong**
+### Blank-Screen Performance
 
-- You reasoned before running code
-- You did not need solution-level help
-
----
-
-## Score
-
-**4 / 5**
-
----
-
-## Code / Solution You Are Most Proud Of
+Minhyi independently wrote the final task:
 
 ```python
 bank_balance = 1000
@@ -1004,17 +1026,46 @@ print(bank_balance)
 print(current_balance)
 ```
 
----
+Expected output:
 
-## Current Weakness
+```text
+1000
+1500
+1500
+```
 
-- Need to be more precise with variable names
-- Avoid small typos
+The assignment logic was correct.
 
----
+The first version contained one naming typo:
 
-## Next Day
+```python
+current_balace
+```
 
-### Day 3 — Core Data Types
+After the mistake was identified, Minhyi corrected it to:
 
-`int` · `float` · `str` · `bool`
+```python
+current_balance
+```
+
+AI autocomplete had been disabled before the final attempt, so the completed final solution was written without inline AI code suggestions.
+
+### Progress Update
+
+- Bootcamp Progress: **Day 2 / 84**
+- Current Phase: **Phase 1 — Python Survival**
+- Current Position: Can create, copy, and reassign simple variables independently while mentally tracking their current values.
+
+### Critical Weakness
+
+> Variable-assignment reasoning is solid, but small naming and typing mistakes can still cause avoidable errors, so variable names need to be checked more carefully before considering a task finished.
+
+### Session Verdict
+
+**COMPLETED**
+
+The learning objective was achieved. Minhyi demonstrated acceptable independent use of variables and assignment and can proceed to the next Day.
+
+### Next Session
+
+**Day 3 — Core data types: `int`, `float`, `str`, `bool`**
