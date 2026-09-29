@@ -3,9 +3,9 @@
 n = 20
 while n > 1:
     if n % 2 == 0:
-        print(int(n))
-        n = n / 2
+        print(n)
+        n = n // 2
     else:
-        print(int(n))
+        print(n)
         n = 3*n + 1
 print("Sequence complete")
