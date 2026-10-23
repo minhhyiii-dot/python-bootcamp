@@ -1,11 +1,11 @@
 position = ["VCB", 100, 120.0, False]
 
 new_price = float(input("New Price: "))
-action = input("Action: ")
+action = input("Action: ").strip().lower()
 if action == "buy" or action == "sell":
     quantity = int(input("Quantity: "))
 if action == "hold":
-    position[1] = position[1]
+    pass
 elif action == "sell":
     if position[1] >= quantity:
         position[1] = position[1] - quantity

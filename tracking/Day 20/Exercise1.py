@@ -10,5 +10,3 @@ print(middle_five)
 print(alternating)
 print(reversed_last_four)
 
-hehe = scores[1:5]
-print(hehe)
