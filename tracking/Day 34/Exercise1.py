@@ -1,7 +1,5 @@
 students = [
-    {"name": "Alice", "scores": [80, 90, 85]},
-    {"name": "Charlie", "scores": [95, 90, 100]},
-    {"name": "Bob", "scores": [60, 70, 65]}
+    {"name": "A", "scores": [0,0,0]}
 ]
 # AVG score
 def avg_score(students):
@@ -11,8 +9,8 @@ def avg_score(students):
         for score in student["scores"]:
             total += score
             count += 1
-            avg = total / count
-            student["average"] = avg
+        avg = total / count
+        student["average"] = avg
 
     return students
 
@@ -39,12 +37,13 @@ def top_student(students):
     for student in students:
         if student["average"] < top_score:
             continue
-        elif student["average"] > top_score:
+        else:
             name = student["name"]
             top_score = student["average"]
     top_stu[name] = top_score
     return top_stu
 
 # Report
-print(grade_assign(avg_score(students)))
-print("Top Student:", top_student(avg_score(students)))
+average_score = avg_score(students)
+print(grade_assign(average_score))
+print("Top Student:", top_student(average_score))
