@@ -15,8 +15,7 @@ class HashTable:
 
         return index
 
-    def set(key, value):
-        HashTable._hash(key) = 
+    
 
 table = HashTable()
 
