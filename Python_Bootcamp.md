@@ -5376,3 +5376,121 @@ No additional mandatory exercises are required.
 ### Next Session
 
 **Day 41 — First Applied Project Build Session**
+
+## --- DAY 41 UPDATE ---
+
+**DAY 41 | COMPLETED | ≈ 2 hours | Level: 4.3/5**
+
+### Focus Topic
+
+**First Applied Project Build Session — Market Data Toolkit v0.1**
+
+Building a function-based stock price analyzer with input validation, nested dictionaries, price calculations, and trend classification.
+
+### Session Notes
+
+- Built a functional Python program that accepts a dictionary containing stock tickers and historical closing prices.
+- Independently designed and implemented three functions:
+  - `filter(data)`: Validates stock tickers and price data.
+  - `key2dict(data)`: Initializes the nested output dictionary.
+  - `program(data)`: Coordinates validation, processes stock prices, and generates the final results.
+- Successfully calculated four output fields for each stock:
+  - `start`: First historical closing price.
+  - `latest`: Most recent closing price.
+  - `change`: Difference between latest and starting prices.
+  - `trend`: Classification as `UP`, `DOWN`, or `FLAT`.
+- Applied previously learned Python concepts, including functions, dictionary iteration, list indexing, conditional branching, and exception raising.
+- Implemented validation rules requiring at least two prices per stock, positive numeric values, and three-character ticker symbols.
+- Used `ValueError` to reject invalid inputs.
+- Tested the program against valid stock data and multiple invalid input scenarios.
+- Corrected issues involving insufficient price history, invalid data types, Boolean values, and incorrect output key naming.
+- Successfully rejected both Boolean and dictionary values through explicit type validation.
+- Completed the program without receiving a full AI-generated solution.
+
+### Minhyi Notes
+
+- Initially assumed each output field should have its own function, resulting in an early estimate of four or five functions.
+- Learned that function decomposition should follow meaningful responsibilities rather than the number of output fields.
+- Asked for guidance on where to begin because designing an entire function-based program was unfamiliar.
+- Chose to implement input validation first, then construct the output dictionary and main processing function.
+- Initially overlooked the requirement that each stock must contain at least two historical prices.
+- Used `float(value)` before checking the input type, creating a potential exception risk for unsupported values.
+- Corrected the validation condition using Python's short-circuit `or` evaluation.
+- Initially allowed Boolean values because Python treats `bool` as a numeric subtype.
+- Fixed this by restricting accepted values to exactly `int` and `float` using `type(value) not in (int, float)`.
+- Corrected the output key from `lastest` to `latest`.
+- Deliberately retained the three-character ticker validation rule as a project-specific business requirement.
+- Recognized that `key2dict()` could potentially be simplified, but retained the original architecture to focus on correctness.
+
+### Key Lesson
+
+> Function-based programming requires separating meaningful responsibilities, validating inputs before calculations, and designing components that work together without unnecessary dependencies.
+
+### Performance Evaluation
+
+- Concept understanding: **4.5/5**
+- Coding correctness: **4.4/5**
+- Reasoning / problem decomposition: **4.1/5**
+- Independence: **4.3/5**
+- Debugging: **4.4/5**
+
+**Final Score: 4.3/5**
+
+### Blank-Screen Performance
+
+Minhyi independently implemented the first complete version of the stock price analyzer using three functions.
+
+**Independent work:**
+- Designed the initial function structure.
+- Implemented dictionary iteration and nested dictionary construction.
+- Calculated starting and latest prices.
+- Calculated absolute price changes.
+- Implemented trend classification using `if / elif / else`.
+- Created validation conditions and raised exceptions for invalid inputs.
+- Executed the program and inspected terminal results.
+
+**AI assistance:**
+- Received conceptual guidance about dividing responsibilities between functions.
+- Received feedback identifying missing validation requirements and an output naming mistake.
+- Received targeted guidance about validation order and Boolean type handling.
+- Implemented the subsequent corrections independently.
+
+**Verified testing:**
+- Valid stock price data produced the expected nested dictionary.
+- Insufficient price history raised `ValueError`.
+- Numeric strings raised `ValueError`.
+- Negative prices raised `ValueError`.
+- Boolean values raised `ValueError`.
+- Dictionary values in the price list raised `ValueError`.
+
+The final implementation demonstrated acceptable independent programming ability, although the function decomposition required initial conceptual guidance.
+
+### Progress Update
+
+- Bootcamp Progress: **Day 41 / 84**
+- Current Phase: **Phase 3 — Functions + Program Decomposition**
+- Current Position: Can independently construct a small applied Python program using multiple functions, nested dictionaries, input validation, and conditional calculations. Still developing the ability to design clean function responsibilities from an unfamiliar specification.
+
+### Critical Weakness
+
+> Function decomposition is still somewhat mechanical. Minhyi can implement multiple working functions but needs to become more confident in deciding which responsibilities genuinely deserve separate functions and which operations should remain together.
+
+### Session Verdict
+
+**COMPLETED**
+
+The Day 41 learning objective was achieved.
+
+Minhyi successfully built his first applied function-based stock price analyzer, corrected important validation issues, and verified the required behaviors through testing.
+
+The initial architecture and core calculations were independently implemented. AI assistance was limited to conceptual guidance and targeted code-review feedback rather than complete solutions.
+
+The program meets the core project requirements and demonstrates sufficient readiness to proceed to the next checkpoint.
+
+### Next Session
+
+**Day 42 — CHECKPOINT 3: Function-Based Program**
+
+Build a complete Python program from an unseen specification.
+
+The main attempt must be completed independently, without AI assistance, to evaluate genuine function decomposition, coding correctness, validation, and debugging ability.
